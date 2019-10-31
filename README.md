@@ -31,8 +31,8 @@ After installing this project on your system, some requirements need to be ther
 3-You can run this task manually by rake aws_data  this will fetch the AmazonCloudFront price or you can pass custom parameters to fetch the other offer code with a specific region rake aws_data['us-east-1','AmazonS3']
 4-To get the list of saving prices you can call the following url
 ```http://localhost:3000//service/AmazonCloudFront/region/us-east-1```
-###### 
-`You will get the response with each date like {
+```json
+You will get the response with each date like {
         "updated_on": "2019-09-12",
         "price": [
             {
@@ -45,6 +45,6 @@ After installing this project on your system, some requirements need to be ther
                 "pricePerUnit": "0.0000012000",
                 "effectiveDate": "2017-09-01T00:00:00.000Z"
             }}
-`
+```
 5- If you want to get another offercode details of diffrent region you can simple call url as below
 ```https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRedshift/current/index.json```
